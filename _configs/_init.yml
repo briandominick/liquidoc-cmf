@@ -1,0 +1,7 @@
+- action: parse
+  data: _data/meta.yml
+  builds:
+    - output: README.adoc
+      template: _templates/liquid/init/init_readme.asciidoc
+    - output: src/index.adoc
+      template: _templates/liquid/init/init_index.asciidoc

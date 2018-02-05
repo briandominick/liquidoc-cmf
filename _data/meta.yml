@@ -1,0 +1,20 @@
+company_name_official: Weee, Inc #REQUIRED
+company_name_short: WEEE #REQUIRED (Can duplicate official)
+company_address_street:
+company_address_city:
+company_address_state:
+company_address_zipcode:
+
+space_type: repo #REQUIRED
+# 'directory' if part of a larger product repo, 'repo' if docs are the whole repo
+
+git_repo_uri:
+
+product_common_name: BoxOdox #REQUIRED This is effectively the title of this docs project
+
+products: # leave this field blank
+  - name: # the name of the first product documented in this repo
+    slug: # lowercase alphanumeric and hyphens (-) only, ex. super-saas-premium
+# Remove the leftmost # marks on subsequent lines to activate a new product record
+#  - name: # the name of the second product
+#    tagline: # a short description of the second product

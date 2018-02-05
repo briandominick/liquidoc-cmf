@@ -1,0 +1,95 @@
+= LiquiDoc CMF
+
+This repo contains the boilerplate files for, and rudimentary documentation of, a content mamanagement framework (CMF) for combining open-source tools and workflows for documentation management.
+LiquiDoc CMF (LDCMF) incorporates two excellent lightweight markup languages (AsciiDoc and YAML) with open-source build and publish utilities (Git, Asciidoctor, Jekyll, Travis CI, and many others) using a wrapper tool called LiquiDoc.
+This creates a truly open, highly portable system for developing and maintaining docs code the way programmers develop and maintain product code.
+
+== Usage
+
+Complete documentation for LDCMF is still being developed.
+
+=== Quickstart
+
+If you have Git and Ruby runtime installed, you can get going with LiquiDoc CMF in a few quick steps.
+
+. Clone this repo.
++
+....
+git clone git@github.com:DocOps/liquidoc-cmf.git
+....
+
+. Rename the cloned repo folder.
++
+....
+mv liquidoc-cmf my_project
+....
+
+. Change to the project directory.
+....
+cd my_project
+....
+
+. Re-associate your files with the proper repository.
+
+.. _If this project is its own Git repo_, change the project's remote origin Git repository.
++
+....
+git remote set-url origin git://github.com:your-project/your-repo-name.git
+....
+
+.. _If this project is part of a parent directory's Git repo_, remove local Git files.
++
+....
+rm -rf .git
+....
+
+. Run Bundler to install dependencies.
++
+....
+bundle install
+....
++
+If Bundler is not installed, run `gem install bundler`, then repeat this command.
+
+. Edit your project metafile.
++
+In your favorite text/code editor, open `_data/meta.yml` and fill out the required info, then *save the file*.
+
+. Run LiquiDoc with the LDCMF initialization config.
++
+....
+bundle exec liquidoc -c _configs/_init.yml
+....
+
+. You can now review and edit your `README.adoc` and `src/index.adoc` files with custom content.
+
+. Run LiquiDoc again to build your first docs.
++
+....
+bundle exec liquidoc -c _configs/build.yml
+....
+
+== Structure
+
+[source]
+----
+liquidoc-cmf/
+├── _configs/
+├── _data/
+├── _templates/
+│   └── liquid/
+├── src/
+│   ├── includes/
+│   ├── portal/
+│   ├── topics/
+│   └── index.adoc
+└── theme/
+README.meta.adoc
+README.adoc
+Gemfile
+----
+
+== Contributing
+
+This is an open source project that is eager for contributions and feedback.
+More soon.
